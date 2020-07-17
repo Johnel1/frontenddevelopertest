@@ -20,3 +20,19 @@
     font-size: 2rem;
     color: #fff;
 }
+.box .population {
+    display: none;
+}
+.box:hover .population{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 70%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 100%; /* Set the width of the positioned div */
+    font-size: 2rem;
+    color: #fff;
+    display: block;
+}

@@ -6,7 +6,11 @@ import Header from './_components/Header';
 import HomePage from './Pages/Home';
 import StarwarCharactersPage from './Pages/StarwarCharacter';
 import StarwarShipsPage from './Pages/StarwarShip';
+import StarshipDetailsPage from './Pages/Details/Starship';
+import PlanetDetailsPage from './Pages/Details/Planet';
+import CharacterDetailsPage from './Pages/Details/Character';
 import {peopleActions, planetActions, starshipsActions} from './_actions';
+import './App.css';
 
 function App({location}) {
 
@@ -33,11 +37,20 @@ function App({location}) {
       <Header 
         location={location}
       />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route  path="/character" component={StarwarCharactersPage} />
-        <Route  path="/starship" component={StarwarShipsPage} />          
-      </Switch>
+        {
+          (IsRequestingPeople || IsRequestingPlanets || IsRequestingStarships) ?
+          <div class="loader"></div>
+        :
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route  path="/character" component={StarwarCharactersPage} />
+          <Route  path="/starship" component={StarwarShipsPage} />
+          <Route  path="/characterdetails" component={CharacterDetailsPage} />
+          <Route  path="/planetdetails" component={PlanetDetailsPage} />
+          <Route  path="/starshipdetails" component={StarshipDetailsPage} />   
+      
+        </Switch>
+        }
       <Footer/> 
     </div>
   );

@@ -36,20 +36,12 @@ function StarwarCharacters() {
           <h2>Starwars Characters</h2>
         </header>
         <div class="row ">
-        {/* <div class='filter'>
-          <label for="gender">Filter:</label>
-          <select name="gender" id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="n/a">N/A</option>
-          </select>
-        </div><br/> */}
         <div class="col-lg-12"> 
         <label for="gender">Filter:</label>
           <select name="gender" id="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="n/a">N/A</option>
+            <option value="n/a">Robot</option>
           </select>
         </div>
         {/* <div class="col-sm"> */}

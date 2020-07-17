@@ -1,0 +1,20 @@
+.loader{
+  height:100%;
+  width:100%;
+  background:url("./_assets/loader.png") no-repeat center center;
+  position:absolute;
+  z-index:10;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .loader {
+    animation: loader-spin infinite 20s linear;
+  }
+}
+@keyframes loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

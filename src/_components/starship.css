@@ -54,3 +54,15 @@
   padding: .5rem .5rem;
   font-size: .825rem;
 }
+
+.card-body .readmore:hover {
+  color: white;
+  background-color: black;
+  width: 43%;
+  margin-left: auto;
+  margin-right: .5rem;
+  border: none;
+  text-decoration: none;
+  padding: .5rem .5rem;
+  font-size: .825rem;
+}

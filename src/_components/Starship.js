@@ -24,7 +24,7 @@ function Starship({row}) {
               }
             }
           >
-            Read More
+            Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
           </Link>  
         </div>
       </div>

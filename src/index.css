@@ -77,3 +77,16 @@ code {
   float: left;
   margin-right: 10px;
 }
+.details {
+  list-style: none;
+}
+.details li{
+  margin: 10px 0;
+}
+.recently {
+  text-align: center;
+  border: 2px solid black;
+  width: 50%;
+  margin: 0rem auto;
+}
+
