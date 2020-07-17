@@ -4,6 +4,8 @@ import {Route, Switch, withRouter} from 'react-router-dom';
 import Footer from './_components/Footer';
 import Header from './_components/Header';
 import HomePage from './Pages/Home';
+import StarwarCharactersPage from './Pages/StarwarCharacter';
+import StarwarShipsPage from './Pages/StarwarShip';
 import {peopleActions, planetActions, starshipsActions} from './_actions';
 
 function App({location}) {
@@ -21,15 +23,21 @@ function App({location}) {
 
   }, []);
 
+  const {IsRequestingPeople} = people;
+  const {IsRequestingPlanets} = planet;
+  const {IsRequestingStarships} = starships;
+
 
   return (
     <div>
       <Header 
         location={location}
-      />       
-        <Switch>
-          <Route exact path="/" component={HomePage} />      
-        </Switch>
+      />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route  path="/character" component={StarwarCharactersPage} />
+        <Route  path="/starship" component={StarwarShipsPage} />          
+      </Switch>
       <Footer/> 
     </div>
   );
