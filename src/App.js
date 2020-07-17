@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import {Route, Switch, withRouter} from 'react-router-dom';
+import Footer from './_components/Footer';
+import Header from './_components/Header';
+import HomePage from './Pages/Home';
+import {peopleActions, planetActions, starshipsActions} from './_actions';
 
-function App() {
+function App({location}) {
+
+  const dispatch =  useDispatch();
+
+  const people = useSelector(state => state.people);
+  const planet = useSelector(state => state.planet);
+  const starships = useSelector(state => state.starships);
+
+  useEffect((model={}) => {
+    dispatch(peopleActions.getPeople(model));
+    dispatch(planetActions.getPlanets(model));
+    dispatch(starshipsActions.getStarships(model));
+
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header 
+        location={location}
+      />       
+        <Switch>
+          <Route exact path="/" component={HomePage} />      
+        </Switch>
+      <Footer/> 
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

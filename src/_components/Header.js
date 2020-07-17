@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import logo from '../_assets/logo.png';
-import './header.scss';
+import './header.css';
 import character1 from '../_assets/character-1.jpg';
 import starShip1 from '../_assets/starship-2.jpg';
 import planet1 from '../_assets/planet-1.jpg';

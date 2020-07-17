@@ -1,5 +1,5 @@
 import React from 'react';
-import './character.scss';
+import './character.css';
 import character1 from '../_assets/character-1.jpg';
 import { Link } from 'react-router-dom'
 
@@ -7,6 +7,7 @@ function Character({row}) {
 
   return (
     <div id='character'>
+      <div class='character'>
       <div class='image'>
         <img src={character1} width='100%' height='100%' alt=""/>
       </div>
@@ -25,6 +26,7 @@ function Character({row}) {
         >
           Read More
         </Link>      
+      </div>
       </div>
     </div>
   )

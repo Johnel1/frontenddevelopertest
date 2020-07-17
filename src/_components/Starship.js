@@ -1,5 +1,5 @@
 import React from 'react';
-import './starship.scss';
+import './starship.css';
 import { Link } from 'react-router-dom'
 import {numberWithCommas} from '../_helpers';
 
