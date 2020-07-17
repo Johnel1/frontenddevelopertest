@@ -1,0 +1,173 @@
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  padding: 20px 20px;
+  position: fixed;
+  transition: all 0.5s;
+  z-index: 997;
+}
+#title {
+  width: 100%;
+  height: 65vh;
+  position: relative;
+  background: url("../_assets/hero-banner.jpg") center top no-repeat;
+  background-size: cover;
+  padding: 100px 0 40px 0; 
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.text {
+  color: white;
+}
+.search-box {
+  position: relative;
+}
+.search {
+  background-color: white;
+  width: 100%;
+}
+.submit {
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  position: absolute;
+  left: 50rem;
+}
+#hero {
+  width: 100%;
+  height: 65vh;
+  background: url("../_assets/hero-banner.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+#hero h3 {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 30px;
+  margin-bottom: 30px;
+  border-radius: 50px;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h6 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 9px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+#hero .btn-get-started:hover {
+  background: #e43c5c;
+  border: 2px solid #e43c5c;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+  #hero .hero-container input[type="text"] {
+    border: 0;
+    width: 600px;
+    background: none;
+    font-size: 16px;
+    padding: 20px 40px;
+    background: #fff;
+    color: #000;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  #hero .hero-container input[type="text"] {
+    border: 0;
+    width: 500px;
+    background: none;
+    font-size: 16px;
+    padding: 20px 30px;
+    background: #fff;
+    color: #000;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+}
+
+@media (min-height: 480px) {
+  #hero .hero-container input[type="text"] {
+    border: 0;
+    width: 400px;
+    background: none;
+    font-size: 16px;
+    padding: 20px 20px;
+    background: #fff;
+    color: #000;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+}
+
+#hero .hero-containerform input[type="submit"]:hover {
+  background: #468db3;
+}
+.buttonInside{
+  position:relative;
+  margin-bottom:10px;
+}
+#container{
+  width: 300px;
+}
+button{
+  position:absolute;
+  left: 0px;
+  top: 20px;
+  border:none;
+  height:20px;
+  width:20px;
+  border-radius:100%;
+  outline:none;
+  text-align:center;
+  font-weight:bold;
+  padding:2px;
+}
