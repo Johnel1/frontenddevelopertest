@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from "react-redux";
-// import './index.scss';
 import PopularStarships from './PopularStarships';
 import PopularPlanets from './PopularPlanets';
 import PopularCharacters from './PopularCharacters';

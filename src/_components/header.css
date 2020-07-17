@@ -20,6 +20,9 @@
   width: 50%;
   padding: 10px;
 }
+.name {
+  color: white;
+} 
 .text {
   color: white;
 }
@@ -65,8 +68,8 @@
   text-align: center;
   padding: 0 15px;
 }
-#hero h3 {
-  background: rgba(255, 255, 255, 0.1);
+#hero h4 {
+  /* background: rgba(255, 255, 255, 0.1); */
   color: #fff;
   font-size: 26px;
   padding: 10px 30px;

@@ -8,9 +8,9 @@ function* getPlanets({data}) {
     try {               
         let planetUri = `${appConstants.BASE_URI}${planetConstants.PLANET}`
 
-        if(data.pages){
-            planetUri = `${planetUri}?page=${data.pages + 1}`;
-        }   
+        if(data.page){
+            planetUri = `${data.page}`;
+        }  
 
         const curriedReq = yield call(createRequest, planetUri, { method: "GET"});           
         const response = yield call(fetch, curriedReq);

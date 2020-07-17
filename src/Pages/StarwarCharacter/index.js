@@ -1,12 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import Character from '../../_components/Character';
-import { Link } from 'react-router-dom'
 import {peopleActions} from '../../_actions';
 
 function StarwarCharacters() {
-    const people = useSelector(state => state.people);
-  const {peopleList} = people;
+  const people = useSelector(state => state.people);
+  const {peopleList, IsSearchingPerson} = people;
   const dispatch =  useDispatch();
 
   const handlePreviousPage = (event, pages) => {
@@ -36,30 +35,32 @@ function StarwarCharacters() {
           <h2>Starwars Characters</h2>
         </header>
         <div class="row ">
-        <div class="col-lg-12"> 
-        <label for="gender">Filter:</label>
-          <select name="gender" id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="n/a">Robot</option>
-          </select>
-        </div>
-        {/* <div class="col-sm"> */}
-        {
-              peopleList.length > 0 ? peopleList.map((row) => {
+          <div class="col-lg-12"> 
+            <label for="gender">Filter:</label>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="n/a">Robot</option>
+            </select>
+          </div>
+          {
+            IsSearchingPerson &&
+            <div class="loader"></div>
+          }
+          {
+            peopleList.length > 0 ? peopleList.map((row) => {
               return(    
                 <div class="col-lg-6 col-md-6 col-sm-12">       
                   <Character row={row} />   
                 </div>          
               );
-              }) 
-              :
-              null
-            } 
-            {/* </ScrollAnimation> */}
-          </div>
+            }) 
+            :
+            null
+          } 
         </div>
-      <div class="pagination">
+      </div>
+      <div class="pagination">     
         <p class='number'>1 - 10 of {count}</p>
         <a disable={previous === null} onClick={handlePreviousPage}>❮</a>
         <a disable={next === null} onClick={handleNextPage}>❯</a>

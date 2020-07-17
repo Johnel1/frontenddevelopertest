@@ -40,15 +40,9 @@ const planetsList =  (state = [], action) => {
 
 const pagination =  (state = {}, action) => {
     switch (action.type) {          
-        // case planetConstants.REQUEST_PLANETS_SUCCESS: {
-        //     const { hasNextPage, nextPage, totalDocs, limit, page} = action.PLANETS.data;
-        //     const result = {hasNextPage, nextPage, totalDocs, limit, page};
-           
-        //     return updateObject(state, result);
-        // }  
-        case planetConstants.SEARCH_PLANET_SUCCESS: {
-            const { hasNextPage, nextPage, totalDocs, limit, page} = action.PLANET.data;
-            const result = {hasNextPage, nextPage, totalDocs, limit, page};
+        case planetConstants.REQUEST_PLANETS_SUCCESS: {
+            const { count, next, previous} = action.planets;
+            const result = {count, next, previous};
            
             return updateObject(state, result);
         }       

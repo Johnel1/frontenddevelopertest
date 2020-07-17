@@ -17,10 +17,9 @@ function Planet({row}) {
         }
       >        
         <div class="box">
-        <img src={planet1} alt=""  />
-        <div class='bottom'>{row.name}</div>   
-        <div class='population'>{numberWithCommas(row.population)}</div>   
-
+          <img src={planet1} alt=""  />
+          <div class='bottom'>{row.name}</div>   
+          <div class='population'>{numberWithCommas(row.population)}</div>   
         </div>              
       </Link> 
     </div>

@@ -1,18 +1,16 @@
 #character {
-    /* width: 35rem; */
     margin: 1rem 1rem;
-}
-.character {
     background-color: #f2f2f2;
 }
 #character .image {
     float: left;
-    width: 60%;    
+    width: 60%; 
+       
 }
 #character .description {
     font-size: 12px;
     width: 35%;
-    float:left;
+    float:right;
     margin:0 0 0 20px;
 
 }
@@ -23,29 +21,3 @@
     color: black;
     font-weight: 500;
 }
-/* 
-@media only screen and (max-width: 480px) {
-    #character {
-        width: 100%;
-        margin: 5px 10px;
-        background-color: #f2f2f2;
-        
-    }
-    #character .image {
-        float: left;
-        width: 60%;    
-    }
-    #character .description {
-        font-size: 8px;
-        width: 20%;
-        float:left;
-    }
-    #character .characterbutton {
-        text-decoration: none;
-        border-bottom:2px solid black;
-        font-size: 11px;
-        color: black;
-        float: left;
-        height: 1rem;
-    } */
-/* //} */

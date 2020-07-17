@@ -1,10 +1,35 @@
 import React from 'react';
-// import './index.scss';
 import Planet from '../../_components/Planet';
-import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import {planetActions} from '../../_actions';
 
-function PopularPlanets({planet}) {
-    const fewPlanet = planet.slice(0,3);
+function PopularPlanets() {
+  const planets = useSelector(state => state.planet);
+  const dispatch =  useDispatch();
+  const {planetsList} = planets;
+
+  const fewPlanet = planetsList.slice(0,3);
+
+  const handlePreviousPage = () => {
+    const { previous} = planets && planets.pagination; 
+    const model = {
+      page: previous
+    }
+    
+    dispatch(planetActions.getPlanets(model));
+  }
+
+  const handleNextPage = () => {
+    const { next} = planets && planets.pagination; 
+    const model = {
+      page: next
+    }
+    
+    dispatch(planetActions.getPlanets(model));
+  }
+
+  const { next, previous} = planets && planets.pagination; 
+
 
   return (
     <section  class="planet section-bg">
@@ -13,29 +38,24 @@ function PopularPlanets({planet}) {
           <h2>Popular Planets</h2>
         </header>
         <div class="row">
-        {/* <div class="col-sm"> */}
-        {
-              fewPlanet.length > 0 ? fewPlanet.map((row) => {
+          {
+            fewPlanet.length > 0 ? fewPlanet.map((row) => {
               return(    
                 <div class="col-lg-4 col-md-6 col-sm-12">       
                   <Planet row={row} />   
                 </div>          
               );
-              }) 
-              :
-              null
-            } 
-            {/* </ScrollAnimation> */}
-          </div>
+            }) 
+            :
+            null
+          } 
         </div>
-        <div >            
-        <Link 
-          class="button"  
-          to='character'
-        >
-           View More
-        </Link>  
-      </div>            
+      </div>
+      <div class="pagination">
+        <a disable={previous === null} onClick={handlePreviousPage} href="#"><span class="circle"></span></a>
+        <a class='active' onClick={handleNextPage} href="#"><span class="circle"></span></a>
+        <a disable={next === null} onClick={handleNextPage} href="#"><span class="circle"></span></a>
+      </div>           
     </section>
   )
 }

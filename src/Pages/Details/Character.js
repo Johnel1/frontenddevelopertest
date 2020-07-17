@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-// import './index.scss';
 import {withRouter} from 'react-router-dom';
 import Character from '../../_components/Character';
 import {detailsActions} from '../../_actions';
@@ -59,6 +58,11 @@ function CharacterDetailsPage({location}) {
         }
        
         </div>
+        <div class="pagination">
+          <a href="#"><span class="circle"></span></a>
+          <a class='active' href="#"><span class="circle"></span></a>
+          <a href="#"><span class="circle"></span></a>
+        </div>  
       </div>
     </section>
   )

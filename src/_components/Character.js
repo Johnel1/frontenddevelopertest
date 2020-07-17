@@ -7,9 +7,8 @@ function Character({row}) {
 
   return (
     <div id='character'>
-      <div class='character'>
       <div class='image'>
-        <img src={character1} width='100%' height='100%' alt=""/>
+        <img src={character1} class='img-fluid' width='100%' height='100%' alt=""/>
       </div>
       <div class='description'>
         <h2 class="title">{row && row.name}</h2>
@@ -26,7 +25,6 @@ function Character({row}) {
         >
           Read More
         </Link>      
-      </div>
       </div>
     </div>
   )
